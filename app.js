@@ -32,22 +32,19 @@ var allProductsArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chai
 
 
 var randomIndexArray = function () {
-  var arrayClone = allProductsArray.slice(0);           //clone to prevent removing items from the original array. ZERO MULTILATION ALLOWED!
+  var arrayClone = allProductsArray.slice(0); //clone to prevent removing items from the original array. ZERO MULTILATION ALLOWED!
   var displayArray = [];
-  var a; 
-  
+  var a;
+
   a = Math.floor(Math.random() * arrayClone.length);
-  console.log(arrayClone.length);
-  displayArray.push(arrayClone[a]);                     // pushing a random item from clone to displayArray 
-  arrayClone.splice(a, 1);                              // remove item at index a from arrayClone so no duplicates can be picked
-  
+  displayArray.push(arrayClone[a]); // pushing a random item from clone to displayArray
+  arrayClone.splice(a, 1); // remove item at index a from arrayClone so no duplicates can be picked
+
   a = Math.floor(Math.random() * arrayClone.length);
-  console.log(arrayClone.length);
   displayArray.push(arrayClone[a]);
   arrayClone.splice(a, 1);
- 
+
   a = Math.floor(Math.random() * arrayClone.length);
-  console.log(arrayClone.length);
   displayArray.push(arrayClone[a]);
   return displayArray;
 };
@@ -55,33 +52,54 @@ var randomIndexArray = function () {
 
 var randomProductSet = function () {
   var productsDonePicked = randomIndexArray();
+  var oldLeft = document.getElementById('left');
+  var left = oldLeft.cloneNode(true);
+  oldLeft.parentNode.replaceChild(left, oldLeft);
+  
+  var oldMiddle = document.getElementById('middle');
+  var middle = oldMiddle.cloneNode(true);
+  oldMiddle.parentNode.replaceChild(middle, oldMiddle);
+
+  var oldRight = document.getElementById('right');
+  var right =oldRight.cloneNode(true);
+  oldRight.parentNode.replaceChild(right, oldRight);
 
   var randomProduct1 = productsDonePicked[0];
-  document.getElementById('left').src = randomProduct1.path;
-  document.getElementById('left').addEventListener('click', function(){
+  left.src = randomProduct1.path;
+  randomProduct1.view++;
+  left.addEventListener('click', function clickLeft(){
     randomProduct1.click++;
     totalClicks++;
+    console.log(totalClicks);
     randomProductSet();
+
   });
 
   var randomProduct2 = productsDonePicked[1];
-  document.getElementById('middle').src = randomProduct2.path;
-  document.getElementById('middle').addEventListener('click', function(){
+  middle.src = randomProduct2.path;
+  randomProduct2.view++;
+  middle.addEventListener('click', function clickMiddle(){
     randomProduct2.click++;
     totalClicks++;
+    console.log(totalClicks);
     randomProductSet();
+
   });
 
   var randomProduct3 = productsDonePicked[2];
-  document.getElementById('right').src =randomProduct3.path;
-  document.getElementById('right').addEventListener('click', function(){
+  right.src =randomProduct3.path;
+  randomProduct3.view++;
+  right.addEventListener('click', function clickRight(){
     randomProduct3.click++;
     totalClicks++;
+    console.log(totalClicks);
     randomProductSet();
+
   });
 };
 
-
-
 randomProductSet();
 
+var endClicks = function () {
+  console.log('25 or bigger');
+};
