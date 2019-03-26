@@ -59,19 +59,19 @@ var randomProductSet = function () {
   var randomProduct1 = productsDonePicked[0];
   document.getElementById('left').src = randomProduct1.path;
   document.getElementById('left').addEventListener('click', function(){
-    console.log('shit was clicked');
+    randomProduct1.click++;
   });
 
   var randomProduct2 = productsDonePicked[1];
   document.getElementById('middle').src = randomProduct2.path;
   document.getElementById('middle').addEventListener('click', function(){
-    console.log('shit was clicked');
+    randomProduct2.click++;
   });
 
   var randomProduct3 = productsDonePicked[2];
   document.getElementById('right').src =randomProduct3.path;
   document.getElementById('right').addEventListener('click', function(){
-    console.log('shit was clicked');
+    randomProduct3.click++;
   });
 
 };
