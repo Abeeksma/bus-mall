@@ -52,10 +52,11 @@ var randomIndexArray = function () {
 
 var randomProductSet = function () {
   var productsDonePicked = randomIndexArray();
-  var oldLeft = document.getElementById('left');
-  var left = oldLeft.cloneNode(true);
-  oldLeft.parentNode.replaceChild(left, oldLeft);
-  
+
+  var oldLeft = document.getElementById('left'); // whats is the element with ID left originally
+  var left = oldLeft.cloneNode(true); //a copy of the element with ID left
+  oldLeft.parentNode.replaceChild(left, oldLeft); //on the DOM puts left where oldLeft used to be (done to remove stacking click debuff)
+
   var oldMiddle = document.getElementById('middle');
   var middle = oldMiddle.cloneNode(true);
   oldMiddle.parentNode.replaceChild(middle, oldMiddle);
@@ -64,42 +65,46 @@ var randomProductSet = function () {
   var right =oldRight.cloneNode(true);
   oldRight.parentNode.replaceChild(right, oldRight);
 
-  var randomProduct1 = productsDonePicked[0];
-  left.src = randomProduct1.path;
-  randomProduct1.view++;
-  left.addEventListener('click', function clickLeft(){
-    randomProduct1.click++;
-    totalClicks++;
-    console.log(totalClicks);
-    randomProductSet();
 
-  });
+  if(totalClicks < 25) {
+    var randomProduct1 = productsDonePicked[0];
+    left.src = randomProduct1.path;
+    randomProduct1.view++;
+    left.addEventListener('click', function clickLeft(){
+      randomProduct1.click++;
+      totalClicks++;
+      randomProductSet();
 
-  var randomProduct2 = productsDonePicked[1];
-  middle.src = randomProduct2.path;
-  randomProduct2.view++;
-  middle.addEventListener('click', function clickMiddle(){
-    randomProduct2.click++;
-    totalClicks++;
-    console.log(totalClicks);
-    randomProductSet();
+    });
 
-  });
+    var randomProduct2 = productsDonePicked[1];
+    middle.src = randomProduct2.path;
+    randomProduct2.view++;
+    middle.addEventListener('click', function clickMiddle(){
+      randomProduct2.click++;
+      totalClicks++;
+      randomProductSet();
 
-  var randomProduct3 = productsDonePicked[2];
-  right.src =randomProduct3.path;
-  randomProduct3.view++;
-  right.addEventListener('click', function clickRight(){
-    randomProduct3.click++;
-    totalClicks++;
-    console.log(totalClicks);
-    randomProductSet();
+    });
 
-  });
+    var randomProduct3 = productsDonePicked[2];
+    right.src =randomProduct3.path;
+    randomProduct3.view++;
+    right.addEventListener('click', function clickRight(){
+      randomProduct3.click++;
+      totalClicks++;
+      randomProductSet();
+
+    });
+  }
+  else {
+    endFunction();
+  }
 };
 
 randomProductSet();
 
-var endClicks = function () {
+var endFunction = function () {
+
   console.log('25 or bigger');
 };
