@@ -1,0 +1,15 @@
+* {
+    border: 1px dashed green;
+}
+
+.three-products {
+    width: 50%;
+    overflow: hidden;
+    float: right;
+    
+}
+
+.images {
+    display: inline-block;
+    width: 30%;
+}

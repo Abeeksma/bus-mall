@@ -38,7 +38,7 @@ var randomIndexArray = function () {
 
   a = Math.floor(Math.random() * arrayClone.length);
   displayArray.push(arrayClone[a]); // pushing a random item from clone to displayArray
-  arrayClone.splice(a, 1); // remove item at index a from arrayClone so no duplicates can be picked
+  arrayClone.splice(a, 1); // remove item at index [a] from arrayClone so no duplicates can be picked then returns item
 
   a = Math.floor(Math.random() * arrayClone.length);
   displayArray.push(arrayClone[a]);
@@ -53,9 +53,9 @@ var randomIndexArray = function () {
 var randomProductSet = function () {
   var productsDonePicked = randomIndexArray();
 
-  var oldLeft = document.getElementById('left'); // whats is the element with ID left originally
-  var left = oldLeft.cloneNode(true); //a copy of the element with ID left
-  oldLeft.parentNode.replaceChild(left, oldLeft); //on the DOM puts left where oldLeft used to be (done to remove stacking click debuff)
+  var oldLeft = document.getElementById('left');             // whats is, the element with ID left originally
+  var left = oldLeft.cloneNode(true);                        //a copy of the element with ID left
+  oldLeft.parentNode.replaceChild(left, oldLeft);            //on the DOM puts left where oldLeft used to be (done to remove stacking click debuff)
 
   var oldMiddle = document.getElementById('middle');
   var middle = oldMiddle.cloneNode(true);
