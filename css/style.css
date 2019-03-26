@@ -1,15 +1,34 @@
 * {
     border: 1px dashed green;
 }
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.center-columns {
+    width: 97%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.graph-section {
+    width: 38%;
+    float:left;
+    height: 600px;
+    text-align: center;
+}
 
 .three-products {
-    width: 50%;
+    width: 60%;
     overflow: hidden;
     float: right;
+    height: 500px;
+    margin: auto;
     
 }
 
 .images {
     display: inline-block;
-    width: 30%;
+    width: 32%;
 }
