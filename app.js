@@ -112,20 +112,16 @@ var endFunction = function () {
   var clickData = [];
   var veiwData = [];
 
-
   for (var i = 0; i < allProductsArray.length; i++){
     labelNames.push(allProductsArray[i].name);
     clickData.push(allProductsArray[i].click);
+    veiwData.push(allProductsArray[i].view);
   }
-
-
-
 
   //----------chart js------------//
   var ctx = document.getElementById('datagraph').getContext('2d');
   var chart = new Chart(ctx, {
-    type: 'bar',
-
+    type: 'horizontalBar',
     data: {
       labels: labelNames,
       datasets: [{
@@ -133,6 +129,11 @@ var endFunction = function () {
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
         data: clickData,
+      },
+      {
+        label: 'View Count',
+        data: veiwData,
+        borderColor: '#3e95cd',
       }]
     },
 
