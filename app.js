@@ -61,6 +61,7 @@ var randomProductSet = function () {
   document.getElementById('left').addEventListener('click', function(){
     randomProduct1.click++;
     totalClicks++;
+    randomProductSet();
   });
 
   var randomProduct2 = productsDonePicked[1];
@@ -68,6 +69,7 @@ var randomProductSet = function () {
   document.getElementById('middle').addEventListener('click', function(){
     randomProduct2.click++;
     totalClicks++;
+    randomProductSet();
   });
 
   var randomProduct3 = productsDonePicked[2];
@@ -75,7 +77,7 @@ var randomProductSet = function () {
   document.getElementById('right').addEventListener('click', function(){
     randomProduct3.click++;
     totalClicks++;
-    console.log(totalClicks);
+    randomProductSet();
   });
 };
 
