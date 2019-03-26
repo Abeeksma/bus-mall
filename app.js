@@ -106,24 +106,37 @@ var randomProductSet = function () {
 randomProductSet();
 
 var endFunction = function () {
-  
   console.log('25 or bigger');
+
+  var labelNames = [];
+  var clickData = [];
+  var veiwData = [];
+
+
+  for (var i = 0; i < allProductsArray.length; i++){
+    labelNames.push(allProductsArray[i].name);
+    clickData.push(allProductsArray[i].click);
+  }
+
+
+
+
+  //----------chart js------------//
+  var ctx = document.getElementById('datagraph').getContext('2d');
+  var chart = new Chart(ctx, {
+    type: 'bar',
+
+    data: {
+      labels: labelNames,
+      datasets: [{
+        label: 'Poduct Votes',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: clickData,
+      }]
+    },
+
+    options: {}
+  });
+
 };
-
-//----------chart js------------//
-var ctx = document.getElementById('datagraph').getContext('2d');
-var chart = new Chart(ctx, {
-  type: 'bar',
-
-  data: {
-    labels: ['Bag', 'Banana'],
-    datasets: [{
-      label: 'Poduct Votes',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: []
-    }]
-  },
-
-  options: {}
-});
