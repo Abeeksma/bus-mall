@@ -1,4 +1,5 @@
 'use strict';
+var totalClicks = 0;
 
 function Product(name, path) {
   this.name = name;
@@ -6,7 +7,6 @@ function Product(name, path) {
   this.view = 0;
   this.click = 0;
 }
-
 
 var bag = new Product('bag', './img/bag.jpg');
 var banana = new Product('banana', './img/banana.jpg');
@@ -60,21 +60,26 @@ var randomProductSet = function () {
   document.getElementById('left').src = randomProduct1.path;
   document.getElementById('left').addEventListener('click', function(){
     randomProduct1.click++;
+    totalClicks++;
   });
 
   var randomProduct2 = productsDonePicked[1];
   document.getElementById('middle').src = randomProduct2.path;
   document.getElementById('middle').addEventListener('click', function(){
     randomProduct2.click++;
+    totalClicks++;
   });
 
   var randomProduct3 = productsDonePicked[2];
   document.getElementById('right').src =randomProduct3.path;
   document.getElementById('right').addEventListener('click', function(){
     randomProduct3.click++;
+    totalClicks++;
+    console.log(totalClicks);
   });
-
 };
+
+
 
 randomProductSet();
 
