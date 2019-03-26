@@ -66,6 +66,7 @@ var randomProductSet = function () {
   oldRight.parentNode.replaceChild(right, oldRight);
 
 
+  //if to fetch a new picture and add event listener 
   if(totalClicks < 25) {
     var randomProduct1 = productsDonePicked[0];
     left.src = randomProduct1.path;
@@ -98,7 +99,7 @@ var randomProductSet = function () {
     });
   }
   else {
-    endFunction();
+    endFunction(); //stops fetching of new pictures and does not add new event listener 
   }
 };
 
