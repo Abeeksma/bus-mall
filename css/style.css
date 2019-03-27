@@ -1,34 +1,81 @@
+/* 
+*********colors*******
+F2F4FF alice blue
+F1DEDC champagne pink
+808A9F roman silver
+FFE4FA pink lace
+FFC4EB classic rose
+*/
+
 * {
-    border: 1px dashed green;
+    border: 1px dashed grey;
 }
 body {
     padding: 0;
-    margin: 0;
+    margin: 2%;
+    background-color: #F2F4FF;
+}
+
+header {    
+    background-color: #808A9F;
+    height: 120px;
+
+}
+
+main {
+    background-color: #FFE4FA;
+    padding: 90px 30px;
 }
 
 .center-columns {
-    width: 97%;
+    width: 98;
     overflow: hidden;
     margin: auto;
 }
 
 .graph-section {
-    width: 38%;
+    width: 45%;
     float:left;
     height: 600px;
-    text-align: center;
+    overflow: scroll;
 }
 
 .three-products {
-    width: 60%;
-    overflow: hidden;
+    width: 53%;
     float: right;
-    height: 500px;
+    height: 250px;
     margin: auto;
-    
+}
+
+.image-box {
+    display: inline-block;
+    width: 32%;
+    background-color: grey;
 }
 
 .images {
-    display: inline-block;
-    width: 32%;
+    height: auto;
+    width: 100%;
+
+}
+
+.start-button {
+    width: 200px;
+    margin: auto;
+    float: right;
+    height: 40px;
+}
+
+.blurb {
+    width: 53%;
+    float: right;
+    height: 250px;
+    margin: auto;
+}
+
+footer {
+    background-color: #808A9F;
+    height: 120px;
+    text-align: center;
+
 }
