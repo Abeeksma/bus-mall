@@ -13,24 +13,79 @@ FFC4EB classic rose
 body {
     padding: 0;
     margin: 2%;
-    background-color: #F2F4FF;
+    background: radial-gradient(ellipse at top, #FFE4FA, transparent),
+    radial-gradient(ellipse at bottom, #808A9F, transparent);
 }
+
+nav {
+    width: 27%;
+    float: right;
+    background-color: #808A9F;
+    border-radius: 200px 0px 200px 0px;
+    -moz-border-radius: 200px 0px 200px 0px;
+    -webkit-border-radius: 200px 0px 200px 0px;
+    border: 5px solid #000000;
+    box-shadow: 10px 10px 5px #808A9F;
+    text-shadow: 2px 2px 5px #F2F4FF;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+  }
+  
+  li {
+    float: right;
+    border-right: #F2F4FF;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: #F2F4FF;
+  }
 
 header {    
     background-color: #808A9F;
+    width: 23%;
     height: 120px;
+    border-radius: 200px 10px 200px 10px;
+    -moz-border-radius: 200px 10px 200px 10px;
+    -webkit-border-radius: 200px 10px 200px 10px;
+    border: 10px solid #000000;
+    color: #FFE4FA;
+    font-size: 36px;
+    text-align: center;
+    margin: 4%;
+    box-shadow: 10px 10px 5px #808A9F;
+}
 
+header h1 {
+    padding-bottom: 4%;
+    margin-top: 0;
+    text-shadow: 2px 2px 5px #F2F4FF;
 }
 
 main {
-    background-color: #FFE4FA;
-    padding: 90px 30px;
+    padding: 60px 30px;
+    box-shadow: 10px 10px 247px -28px rgba(0,0,0,0.75);
+    border-radius: 0px 200px 0px 200px;
+    -moz-border-radius: 0px 200px 0px 200px;
+    -webkit-border-radius: 0px 200px 0px 200px;
+    border: 10px solid #000000;
 }
 
 .center-columns {
     width: 98;
     overflow: hidden;
     margin: auto;
+    padding: 1%;
 }
 
 .graph-section {
@@ -73,9 +128,38 @@ main {
     margin: auto;
 }
 
+.blurb-text {
+    padding: 45px;
+    text-indent: 4%;
+    font-size: 17px;
+}
+
 footer {
     background-color: #808A9F;
+    width: 20%;
     height: 120px;
     text-align: center;
+    border-radius: 200px 10px 200px 10px;
+    -moz-border-radius: 200px 10px 200px 10px;
+    -webkit-border-radius: 200px 10px 200px 10px;
+    border: 10px solid #000000;
+    float: right;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    box-shadow: 10px 10px 5px #808A9F;
 
+}
+footer h2 {
+    color: #FFE4FA;
+    text-shadow: 2px 2px 5px #F2F4FF;
+}
+
+footer p {
+    font-size: 12px;
+    text-shadow: 2px 2px 5px #F2F4FF;
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
 }
