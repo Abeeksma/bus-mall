@@ -7,9 +7,13 @@ FFE4FA pink lace
 FFC4EB classic rose
 */
 
+/*
+*******outline all the boxes******
 * {
     border: 1px dashed grey;
-}
+}*/
+
+
 body {
     padding: 0;
     margin: 2%;
@@ -58,7 +62,7 @@ header {
     border-radius: 200px 10px 200px 10px;
     -moz-border-radius: 200px 10px 200px 10px;
     -webkit-border-radius: 200px 10px 200px 10px;
-    border: 10px solid #000000;
+    border: 5px solid #000000;
     color: #FFE4FA;
     font-size: 36px;
     text-align: center;
@@ -142,7 +146,7 @@ footer {
     border-radius: 200px 10px 200px 10px;
     -moz-border-radius: 200px 10px 200px 10px;
     -webkit-border-radius: 200px 10px 200px 10px;
-    border: 10px solid #000000;
+    border: 5px solid #000000;
     float: right;
     margin-top: 4%;
     margin-bottom: 4%;

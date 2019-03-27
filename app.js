@@ -99,23 +99,22 @@ var randomProductSet = function () {
     });
   }
   else {
-    endFunction(); //stops fetching of new pictures and does not add new event listener
+    localStorage.setItem ('allProductsArray', JSON.stringify(allProductsArray));
+    endFunction(allProductsArray);
   }
 };
 
-randomProductSet();
-
-var endFunction = function () {
+var endFunction = function (endFunctionArray) {
   console.log('25 or bigger');
 
   var labelNames = [];
   var clickData = [];
   var veiwData = [];
 
-  for (var i = 0; i < allProductsArray.length; i++){
-    labelNames.push(allProductsArray[i].name);
-    clickData.push(allProductsArray[i].click);
-    veiwData.push(allProductsArray[i].view);
+  for (var i = 0; i < endFunctionArray.length; i++){
+    labelNames.push(endFunctionArray[i].name);
+    clickData.push(endFunctionArray[i].click);
+    veiwData.push(endFunctionArray[i].view);
   }
 
   //----------chart js------------//
@@ -141,3 +140,25 @@ var endFunction = function () {
   });
 
 };
+
+var loadData = function () {
+  if (localStorage['allProductsArray'] ) {
+    endFunction(JSON.parse(localStorage.getItem('allProductsArray')));
+  }
+  else { randomProductSet();
+  }
+};
+
+loadData();
+/* local storage??
+
+localStorage.setItem ('allProductsArray', JSON.stringify(allProductsArray));
+
+
+
+var "whatever im getting" = JSON.parse(localStorage.getItem('thing i get'));
+
+
+
+
+*/
