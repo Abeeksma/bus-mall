@@ -126,14 +126,14 @@ var endFunction = function () {
       labels: labelNames,
       datasets: [{
         label: 'Poduct Votes',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(169,169,169)',
+        borderColor: 'rgb(169,169,169)',
         data: clickData,
       },
       {
         label: 'View Count',
         data: veiwData,
-        borderColor: '#3e95cd',
+        
       }]
     },
 
