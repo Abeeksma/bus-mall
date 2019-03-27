@@ -13,17 +13,30 @@ FFC4EB classic rose
 body {
     padding: 0;
     margin: 2%;
-    background-color: #F2F4FF;
+    background: radial-gradient(ellipse at top, #FFE4FA, transparent),
+            radial-gradient(ellipse at bottom, #808A9F, transparent);
+
 }
 
 header {    
     background-color: #808A9F;
+    width: 25%;
     height: 120px;
-
+    border-radius: 200px 10px 200px 10px;
+    -moz-border-radius: 200px 10px 200px 10px;
+    -webkit-border-radius: 200px 10px 200px 10px;
+    border: 10px solid #000000;
+    color: #FFE4FA;
+    font-size: 36px;
+    text-align: center;
+    margin: 4%;
+}
+header h1 {
+    padding-bottom: 4%;
+    margin-top: 0;
 }
 
 main {
-    background-color: #FFE4FA;
     padding: 90px 30px;
 }
 
@@ -31,6 +44,7 @@ main {
     width: 98;
     overflow: hidden;
     margin: auto;
+    padding: 1%;
 }
 
 .graph-section {
@@ -75,7 +89,22 @@ main {
 
 footer {
     background-color: #808A9F;
+    width: 20%;
     height: 120px;
     text-align: center;
+    border-radius: 200px 10px 200px 10px;
+    -moz-border-radius: 200px 10px 200px 10px;
+    -webkit-border-radius: 200px 10px 200px 10px;
+    border: 10px solid #000000;
+    float: right;
+    margin-top: 4%;
+    margin-bottom: 4%;
 
+}
+footer h2 {
+    color: #FFE4FA;
+}
+
+footer p {
+    font-size: 12px;
 }
