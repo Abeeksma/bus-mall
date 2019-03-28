@@ -5,13 +5,8 @@ F1DEDC champagne pink
 808A9F roman silver
 FFE4FA pink lace
 FFC4EB classic rose
+3CFF38 hover green color
 */
-
-/*
-*******outline all the boxes******
-* {
-    border: 1px dashed grey;
-}*/
 
 
 body {
@@ -22,7 +17,7 @@ body {
 }
 
 nav {
-    width: 27%;
+    width: 29%;
     float: right;
     background-color: #808A9F;
     border-radius: 200px 0px 200px 0px;
@@ -48,6 +43,7 @@ ul {
   }
   
   li a {
+    width: 55px;
     display: block;
     text-align: center;
     padding: 18px 22px;
@@ -62,8 +58,8 @@ ul {
 
 header {    
     background-color: #808A9F;
-    width: 23%;
-    height: 120px;
+    width: 25%;
+    height: 150px;
     border-radius: 200px 10px 200px 10px;
     -moz-border-radius: 200px 10px 200px 10px;
     -webkit-border-radius: 200px 10px 200px 10px;
@@ -76,8 +72,8 @@ header {
 }
 
 header h1 {
-    padding-bottom: 4%;
-    margin-top: 0;
+    padding-bottom: 5%;
+    margin-top: 5%;
     text-shadow: 2px 2px 5px #F2F4FF;
 }
 
@@ -109,26 +105,30 @@ main {
     float: right;
     height: 250px;
     margin: auto;
+    margin-bottom: 4%;
 }
 
 .image-box {
     display: inline-block;
-    width: 32%;
+    
     background-color: grey;
     height: 240px;
     box-shadow: 10px 10px 5px #808A9F;
+    text-align: center; 
     
 }
 
 .images {
-    height: auto;
-    width: 100%;
+    height: 230px;
+    width: 230px;
+}
 
+.button-wrapper {
+    text-align: center;
 }
 
 .start-button {
     width: 200px;
-    margin: auto;
     height: 40px;
     background-color: #808A9F;
     border-radius: 0px 200px 0px 200px;
