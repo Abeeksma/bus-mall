@@ -53,6 +53,11 @@ ul {
     padding: 18px 22px;
     text-decoration: none;
     color: #F2F4FF;
+    margin-right: 2%;
+  }
+
+  a:hover {
+    text-shadow: 0 0 3px #3CFF38;
   }
 
 header {    
@@ -110,6 +115,9 @@ main {
     display: inline-block;
     width: 32%;
     background-color: grey;
+    height: 240px;
+    box-shadow: 10px 10px 5px #808A9F;
+    
 }
 
 .images {
@@ -121,8 +129,22 @@ main {
 .start-button {
     width: 200px;
     margin: auto;
-    float: right;
     height: 40px;
+    background-color: #808A9F;
+    border-radius: 0px 200px 0px 200px;
+    -moz-border-radius: 0px 200px 0px 200px;
+    -webkit-border-radius: 0px 200px 0px 200px;
+    border: 3px solid #383838;
+    opacity: 0.5;
+    transition: 0.3s;
+    color: #FFE4FA;
+    text-shadow: 2px 2px 5px #F2F4FF;
+}
+
+.start-button:hover {
+    opacity: 1;
+    text-shadow: 0 0 3px #3CFF38;
+
 }
 
 .blurb {
@@ -161,6 +183,12 @@ footer h2 {
 footer p {
     font-size: 12px;
     text-shadow: 2px 2px 5px #F2F4FF;
+}
+
+footer p:hover {
+    transform: scale(2, 2);
+    text-shadow: 0 0 3px #3CFF38;
+
 }
 
 ::-webkit-scrollbar {
