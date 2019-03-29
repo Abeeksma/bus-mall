@@ -153,12 +153,5 @@ loadData();
 /* local storage??
 
 localStorage.setItem ('allProductsArray', JSON.stringify(allProductsArray));
-
-
-
 var "whatever im getting" = JSON.parse(localStorage.getItem('thing i get'));
-
-
-
-
 */
